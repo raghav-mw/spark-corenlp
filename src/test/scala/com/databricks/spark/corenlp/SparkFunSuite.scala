@@ -11,7 +11,7 @@ trait SparkFunSuite extends FunSuite with BeforeAndAfterAll {
   override def beforeAll(): Unit = {
     sc = SparkContext.getOrCreate(
       new SparkConf()
-        .setMaster("local[2]")
+        .setMaster("local[8]")
         .setAppName(this.getClass.getSimpleName)
     )
     sqlContext = SQLContext.getOrCreate(sc)
